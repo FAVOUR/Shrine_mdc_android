@@ -8,7 +8,7 @@ import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
 import java.util.ArrayList
 
-class ProductEntry(val title:String,dynamicUrl:String,val url:String,val description: String) {
+class ProductEntry(val title:String,dynamicUrl:String,val url:String, val price: String,val description: String) {
 
      companion object{
          /**
