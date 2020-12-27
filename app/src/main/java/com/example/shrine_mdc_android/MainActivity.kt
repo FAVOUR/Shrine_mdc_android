@@ -3,7 +3,6 @@ package com.example.shrine_mdc_android
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.codelabs.mdc.kotlin.shrine.NavigationHost
 
 class MainActivity : AppCompatActivity(), NavigationHost {
     override fun onCreate(savedInstanceState: Bundle?) {
