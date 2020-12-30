@@ -2,6 +2,7 @@ package com.example.shrine_mdc_android.network
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.util.Log
 import android.util.LruCache
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.ImageLoader
