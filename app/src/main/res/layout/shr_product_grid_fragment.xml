@@ -14,8 +14,25 @@
             android:id="@+id/app_bar"
              android:layout_width="match_parent"
              style="@style/Widget.Shrine.Toolbar"
+             app:title="@string/app_name"
              android:layout_height="?attr/actionBarSize"
              app:navigationIcon="@drawable/shr_menu"/>
      </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:background="@color/productGridBackgroundColor"
+        android:paddingStart="@dimen/shr_product_grid_spacing"
+        android:paddingEnd="@dimen/shr_product_grid_spacing"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
