@@ -13,5 +13,6 @@
     <color name="loginPageBackgroundColor">#FFFFFF</color>
     <color name="productGridBackgroundColor">#FFFFFF</color>
     <color name="textInputOutlineColor">#FBB8AC</color>
+    <color name="textColorPrimary">#442C2E</color>
 
 </resources>
