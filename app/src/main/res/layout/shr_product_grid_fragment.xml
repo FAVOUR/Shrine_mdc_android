@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
      <com.google.android.material.appbar.AppBarLayout
          android:layout_width="match_parent"
@@ -20,11 +18,25 @@
              app:navigationIcon="@drawable/shr_menu"/>
      </com.google.android.material.appbar.AppBarLayout>
 
+
+    <LinearLayout
+        style="@style/Widget.Shrine.Backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="100dp"
+        android:paddingBottom="100dp">
+
+    </LinearLayout>
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/product_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
         android:elevation="6dp"
+        android:visibility="gone"
         android:background="@color/productGridBackgroundColor"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
