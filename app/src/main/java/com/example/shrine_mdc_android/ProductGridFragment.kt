@@ -21,8 +21,9 @@ class ProductGridFragment : Fragment() {
         // Inflate the layout for this fragment with the ProductGrid theme
         val view = inflater.inflate(R.layout.shr_product_grid_fragment, container, false)
 
-        // Set up the tool bar
+      //  Set up the toolbar.
         (activity as AppCompatActivity).setSupportActionBar(view.app_bar)
+        view.app_bar.setNavigationOnClickListener(NavigationIconClickListener(activity!!, view.product_grid))
 
         // Set up the RecyclerView
         view.recycler_view.setHasFixedSize(true)
