@@ -1,9 +1,9 @@
 package com.example.shrine_mdc_android
 
+import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,6 +15,10 @@ import kotlinx.android.synthetic.main.shr_product_grid_fragment.*
 import kotlinx.android.synthetic.main.shr_product_grid_fragment.view.*
 
 class ProductGridFragment : Fragment() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -23,6 +27,7 @@ class ProductGridFragment : Fragment() {
 
       //  Set up the toolbar.
         (activity as AppCompatActivity).setSupportActionBar(view.app_bar)
+//        view.app_bar.setNavigationOnClickListener(NavigationIconClickListener(activity!!, view.product_grid, AccelerateDecelerateInterpolator()))
         view.app_bar.setNavigationOnClickListener(NavigationIconClickListener(activity!!, view.product_grid))
 
         // Set up the RecyclerView
@@ -42,6 +47,16 @@ class ProductGridFragment : Fragment() {
         view.recycler_view.addItemDecoration(ProductGridItemDecoration(largePadding, smallPadding))
         view.recycler_view.addItemDecoration(ProductGridItemDecoration(largePadding, smallPadding))
 
+
+        // Set cut corner background for API 23+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.product_grid.background = context?.getDrawable(R.drawable.shr_product_grid_background_shape)
+        }
         return view;
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.shr_toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, menuInflater)
     }
 }
