@@ -9,12 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_trans">#DADCE0</color>
     <color name="transparent_white">#E0E0E0</color>
-<!--    <color name="toolbarIconColor">#FFFFFF</color>-->
     <color name="loginPageBackgroundColor">#FFFFFF</color>
     <color name="textColorPrimary">#442C2E</color>
     <color name="toolbarIconColor">@color/textColorPrimary</color>
 
-    <!--    <color name="productGridBackgroundColor">#FFFFFF</color>-->
     <color name="productGridBackgroundColor">#FFFBFA</color>
 
 
