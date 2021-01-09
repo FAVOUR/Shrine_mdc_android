@@ -34,7 +34,6 @@ class LoginFragment : Fragment() {
         }
         return view
     }
-
     /*
         In reality, this will have more complex logic including, but not limited to, actual
         authentication of the username and password.
