@@ -7,9 +7,12 @@ import com.example.shrine_mdc_android.network.ImageRequester
 import com.example.shrine_mdc_android.network.ProductEntry
 
 
+
+
 /**
  * Adapter used to show a simple grid of products.
  */
+
 class ProductCardRecyclerViewAdapter(private val productList: List<ProductEntry>) : RecyclerView.Adapter<ProductCardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCardViewHolder {
