@@ -20,7 +20,6 @@ class ProductCardRecyclerViewAdapter(private val productList: List<ProductEntry>
         return ProductCardViewHolder(layoutView)
     }
 
-
     override fun onBindViewHolder(holder: ProductCardViewHolder, position: Int) {
         if (position < productList.size) {
             val product = productList[position]
